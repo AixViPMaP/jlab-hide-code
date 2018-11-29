@@ -1,0 +1,37 @@
+{
+  "name": "jlab-hide-code",
+  "version": "0.1.0",
+  "description": "JuypterLab extension: Adds two buttons to the notebook toolbar to hide/unhide all code cells ",
+  "homepage": "http://www.aixvipmap.de",
+  "bugs": {
+    "url": "https://github.com/AixViPMaP"
+  },
+  "license": "Proprietary",
+  "author": "Lukas Koschmieder",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^0.19.1",
+    "@jupyterlab/apputils": "^0.19.1",
+    "@jupyterlab/docregistry": "^0.19.1",
+    "@jupyterlab/notebook": "^0.19.2",
+    "@phosphor/disposable": "^1.1.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~3.1.1"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
